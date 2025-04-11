@@ -3,40 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pho Que</title>
+    <title>Pho Que Restaurant</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Pho Que</h1>
-        <p>Your catchy tagline goes here.</p>
+        <div class="container">
+            <nav>
+                <a href="index.html">Pho Que</a>
+                <ul>
+                    <li><a href="index.html" class="nav-link"><span>Home</span></a></li>
+                    <li><a href="menu.html" class="nav-link"><span>Menu</span></a></li>
+                    <li><a href="contact.html" class="nav-link"><span>Contact</span></a></li>
+                    <li><a href="order.html" class="order-button">Order NOW!</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        
+        <div class="hero">
+            <h1>Authentic Pho, Exceptional Taste.</h1>
+            <p>Experience Vietnamese flavors like never before.</p>
+            <a href="menu.html" class="button">View Our Menu</a>
+        </div>
     </header>
 
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="service-item">
-            <h3>Service 1</h3>
-            <p>Brief description of service 1.</p>
-        </div>
-        <div class="service-item">
-            <h3>Service 2</h3>
-            <p>Brief description of service 2.</p>
-        </div>
-        <div class="service-item">
-            <h3>Service 3</h3>
-            <p>Brief description of service 3.</p>
+    <section id="menu" class="section">
+        <h2>Fan Favorites</h2>
+        <div class="menu-items">
+            <div class="item">
+                <h3>Classic Pho</h3>
+                <p>Traditional broth, tender beef, fresh herbs.</p>
+            </div>
+            <div class="item">
+                <h3>Chicken Pho</h3>
+                <p>Light and savory broth, shredded chicken, and greens.</p>
+            </div>
+            <div class="item">
+                <h3>Vegan Pho</h3>
+                <p>Delicious vegetable broth with tofu and seasonal veggies.</p>
+            </div>
         </div>
     </section>
 
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+    <section class="instagram-carousel">
+        <h2>Follow Us on Instagram</h2>
+        <div class="carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Slides inserted by JS -->
+          </div>
+          <button class="nav prev" onclick="prevSlide()">&#10094;</button>
+          <button class="nav next" onclick="nextSlide()">&#10095;</button>
+        </div>
+      </section>
+      
+      <style>
+      .instagram-carousel {
+        background-color: #1e1e1e;
+        color: white;
+        padding: 60px 20px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      
+      .instagram-carousel h2 {
+        color: #ffffff;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+      }
+      
+      .carousel {
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+      }
+      
+      .carousel-track {
+        display: flex;
+        transition: transform 0.6s ease;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .slide {
+        flex: 0 0 900px;
+        background-color: #2a2a2a;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        text-align: left;
+        padding: 20px;
+        color: white;
+        opacity: 0.4;
+        transform: scale(0.95);
+        transition: all 0.4s ease;
+      }
+      
+      .slide.active {
+        opacity: 1;
+        transform: scale(1);
+        background-color: #333;
+      }
+      
+      .slide img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 15px;
+      }
+      
+      .slide .caption {
+        font-size: 1rem;
+        opacity: 0.85;
+      }
+      
+      .slide .author {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      
+      .nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        z-index: 10;
+      }
+      
+      .nav.prev { left: 10px; }
+      .nav.next { right: 10px; }
+      
+      @media (max-width: 768px) {
+    .carousel {
+        padding: 0 16px;
+    }
+
+    .carousel-track {
+        justify-content: center;
+    }
+
+    .slide {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .slide img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+    }
+
+
+      
+      </style>
+      
+      <script>
+      const posts = [
+        {
+          image: 'https://picsum.photos/id/1015/600/400',
+          caption: 'Fresh from the kitchen – handcrafted perfection.',
+          author: '@phoque_restaurant'
+        },
+        {
+          image: 'https://picsum.photos/id/1016/600/400',
+          caption: 'Our signature bowl, the pride of our chef.',
+          author: '@phoque_restaurant'
+        },
+        {
+          image: 'https://picsum.photos/id/1018/600/400',
+          caption: 'Steaming hot, rich, and full of flavor.',
+          author: '@phoque_restaurant'
+        },
+        {
+          image: 'https://picsum.photos/id/1020/600/400',
+          caption: 'Made with love, served with care.',
+          author: '@phoque_restaurant'
+        }
+      ];
+      
+      let currentIndex = 0;
+      const carouselTrack = document.getElementById('carouselTrack');
+      
+      function renderSlides() {
+        carouselTrack.innerHTML = '';
+        posts.forEach((post, index) => {
+          const slide = document.createElement('div');
+          slide.className = 'slide' + (index === currentIndex ? ' active' : '');
+          slide.innerHTML = `
+            <img src="${post.image}" alt="Instagram Post">
+            <div class="caption">${post.caption}</div>
+            <div class="author">${post.author}</div>
+          `;
+          slide.onclick = () => window.open('https://instagram.com/yourrestaurant', '_blank');
+          carouselTrack.appendChild(slide);
+        });
+        const shift = -currentIndex * (500 + 30); // slide width + gap
+        carouselTrack.style.transform = `translateX(${shift + (window.innerWidth / 2 - 250)}px)`;
+      }
+      
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % posts.length;
+        renderSlides();
+      }
+      
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + posts.length) % posts.length;
+        renderSlides();
+      }
+      
+      setInterval(nextSlide, 5000);
+      
+      renderSlides();
+      </script>
+      
+      
+
+    <section id="contact" class="section contact">
+        <h2>Visit Us</h2>
+        <p>Email: <a href="mailto:info@phoque.com">info@phoque.com</a></p>
         <p>Phone: (123) 456-7890</p>
-        <p>Address: 123 Your Street, Your City</p>
+        <p>Address: 123 Pho Street, Your City</p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Your Business Name. All Rights Reserved.</p>
+        <p>&copy; 2025 Pho Que Restaurant. All Rights Reserved.</p>
     </footer>
 </body>
 </html>

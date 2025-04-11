@@ -1,57 +1,212 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f9fafb;
-    color: #333;
-    line-height: 1.6;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FAFAF7;
+    color: #212121;
 }
 
 header {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #F4EDE5;
+    padding: 20px 40px;
 }
 
-header h1 {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+nav .logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #212121;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #A36A4D;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-header p {
+.hero p {
     font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #555;
 }
 
-.services, .contact {
-    padding: 40px 20px;
-    max-width: 900px;
+.button {
+    background-color: #212121;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #A36A4D;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
     margin: auto;
+    text-align: center;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #007BFF;
-}
-
-.service-item {
-    text-align: center;
-    padding: 15px;
+.section h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    color: #A36A4D;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    width: 280px;
 }
 
 .contact p {
-    text-align: center;
+    font-size: 1rem;
+    margin: 10px 0;
 }
 
 footer {
+    background-color: #F4EDE5;
     text-align: center;
     padding: 15px;
-    background-color: #e1e8f0;
-    color: #555;
-    font-size: 0.9rem;
+    color: #666;
 }
+
+.order-button {
+    background-color: #212121;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+    line-height: 1;
+    font-size: 0.9rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.order-button:hover {
+    background-color: #A36A4D;
+    transform: scale(1.1);
+    color: white;
+}
+
+header {
+    border-left:  1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.order-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #F4EDE5;
+    z-index: 100;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px; /* increase or decrease this number to control spacing */
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #A36A4D;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-3px);
+    color: #A36A4D;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
