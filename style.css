@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
+
 
 * {
     box-sizing: border-box;
@@ -40,7 +42,6 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: #212121;
-    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -229,11 +230,6 @@ nav ul li {
     margin-bottom: 20px;
 }
 
-.footer-logo {
-    max-width: 150px;
-    margin-bottom: 15px;
-}
-
 .footer-column h3 {
     font-size: 18px;
     margin-bottom: 20px;
@@ -252,26 +248,50 @@ nav ul li {
     color: #A36A4D;
 }
 
-.social-icons {
+.footer-column {
     display: flex;
-    gap: 15px;
-    margin-top: 10px;
+    flex-direction: column;
+    align-items: center; /* centers content horizontally */
+    text-align: center;
+  }
+  
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
 }
 
 .social-icon {
-    width: 30px;
-    height: 30px;
-    background-color: #555;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 37px; /* exact height = perfect vertical center */
+  font-size: 18px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icon i {
+  vertical-align: middle;
+  line-height: inherit;
+  color: white;
+
 }
 
 .social-icon:hover {
-    background-color: #777;
+  background-color: #c62828;
+  transform: scale(1.1);
 }
+
 
 .copyright {
     text-align: center;
@@ -346,5 +366,63 @@ nav ul li {
   @keyframes scroll {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+  }
+  
+
+/* Navbar base */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    position: relative;
+  }
+  
+  .navbar .logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+  }
+
+  /* Nav links */
+  
+  .nav-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  /* Hamburger hidden by default */
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Mobile view */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: white;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
   }
   
