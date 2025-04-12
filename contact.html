@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pho Que - Contact</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.avif" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -34,6 +35,15 @@
         <p>Address: 123 Pho Street, Your City</p>
         <!-- You can embed a contact form here later -->
     </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+      
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('show');
+        });
+    </script>
 
     <footer>
         <p>&copy; 2025 Pho Que Restaurant. All Rights Reserved.</p>
