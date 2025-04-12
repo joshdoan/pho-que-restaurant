@@ -12,8 +12,10 @@
     <header>
         <div class="container">
           <nav class="navbar">
-            <a href="index.html" class="logo">Pho Que</a>
-      
+            <a href="index.html" class="logo">
+              <img src="menu-header.png" alt="Pho Que Logo">
+            </a>
+            
             <button class="hamburger" id="hamburger">&#9776;</button>
       
             <ul class="nav-links" id="nav-links">
@@ -24,13 +26,13 @@
             </ul>
           </nav>
         </div>
-      
-        <div class="hero">
-          <h1>Authentic Pho, Exceptional Taste.</h1>
-          <p>Experience Vietnamese flavors like never before.</p>
-          <a href="menu.html" class="button">View Our Menu</a>
-        </div>
       </header>
+
+      <div class="hero">
+        <h1>Authentic Pho, Exceptional Taste.</h1>
+        <p>Experience Vietnamese flavors like never before.</p>
+        <a href="menu.html" class="button">View Our Menu</a>
+      </div>
       
     
     <section class="stats-section">
@@ -62,28 +64,75 @@
       </section>
       
 
-    <section id="menu" class="section">
-        <h2>Fan Favorites</h2>
-        <div class="menu-items">
-            <div class="item">
-                <h3>Classic Pho</h3>
-                <p>Traditional broth, tender beef, fresh herbs.</p>
+      <section class="fan-favourites">
+        <h2>Featured Items</h2>
+      
+        <div class="carousel-wrapper">
+          <button class="carousel-btn left" onclick="scrollCarousel(-1)">&#10094;</button>
+      
+          <div class="carousel" id="favourites-carousel">
+            <!-- Slide 1 -->
+            <div class="favourite-card">
+              <img src="springroll.webp" alt="Pho Dac Biet">
+              <div class="card-info">
+                <h3>Phở Đặc Biệt</h3>
+                <p>House special with brisket, meatballs, tendon & rare steak.</p>
+              </div>
             </div>
-            <div class="item">
-                <h3>Chicken Pho</h3>
-                <p>Light and savory broth, shredded chicken, and greens.</p>
+      
+            <!-- Slide 2 -->
+            <div class="favourite-card">
+              <img src="menu-banner.jpg" alt="Grilled Pork Rice">
+              <div class="card-info">
+                <h3>Grilled Pork Chop Rice</h3>
+                <p>Juicy marinated pork served over fragrant jasmine rice.</p>
+              </div>
             </div>
-            <div class="item">
-                <h3>Vegan Pho</h3>
-                <p>Delicious vegetable broth with tofu and seasonal veggies.</p>
+      
+            <!-- Slide 3 -->
+            <div class="favourite-card">
+              <img src="menu-header.webp" alt="Bun Thit Nuong">
+              <div class="card-info">
+                <h3>Bún Thịt Nướng</h3>
+                <p>Vermicelli noodles with grilled pork & egg rolls.</p>
+              </div>
             </div>
+      
+            <!-- Slide 4 -->
+            <div class="favourite-card">
+              <img src="images/banh-xeo.jpg" alt="Bánh Xèo">
+              <div class="card-info">
+                <h3>Bánh Xèo</h3>
+                <p>Vietnamese sizzling crepe with shrimp and pork.</p>
+              </div>
+            </div>
+      
+            <!-- Slide 5 -->
+            <div class="favourite-card">
+              <img src="images/thai-tea.jpg" alt="Thai Iced Tea">
+              <div class="card-info">
+                <h3>Thai Iced Tea</h3>
+                <p>Sweet and creamy iced tea with bold flavor.</p>
+              </div>
+            </div>
+          </div>
+      
+          <button class="carousel-btn right" onclick="scrollCarousel(1)">&#10095;</button>
         </div>
+      </section>
+      
+
+
+    <!-- VISIT SECTION -->
+    <section class="visit-full-white">
+      <div class="visit-inner">
+        <h2>Visit Us</h2>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23598.501697838048!2d-71.08106678654076!3d42.32519325652812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37b505bbd252d%3A0xd02cf8676e6703f8!2sPho%20Que%20Restaurant!5e0!3m2!1sen!2sus!4v1744472662479!5m2!1sen!2sus" width=100% height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section contact">
-        <h2>Visit Us</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23598.501697838048!2d-71.08106678654076!3d42.32519325652812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37b505bbd252d%3A0xd02cf8676e6703f8!2sPho%20Que%20Restaurant!5e0!3m2!1sen!2sus!4v1744472662479!5m2!1sen!2sus" width=100% height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </section>
 
     <footer>
         <div class="footer-container">
@@ -146,6 +195,18 @@
   window.addEventListener('load', updateTickerSpeed);
 </script>
 
+<script>
+  function scrollCarousel(direction) {
+    const carousel = document.getElementById("favourites-carousel");
+    const card = carousel.querySelector(".favourite-card");
+    const scrollAmount = card.offsetWidth + 20; // card width + gap
+
+    carousel.scrollBy({
+      left: direction * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+</script>
       
       
 </body>
