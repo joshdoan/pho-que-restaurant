@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pho Que Restaurant</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
 </head>
 <body>
     <header>
@@ -19,14 +22,42 @@
                 </ul>
             </nav>
         </div>
-        
-        
+
         <div class="hero">
             <h1>Authentic Pho, Exceptional Taste.</h1>
             <p>Experience Vietnamese flavors like never before.</p>
             <a href="menu.html" class="button">View Our Menu</a>
         </div>
     </header>
+    
+    <section class="stats-section">
+        <div class="stats-container">
+          <div class="stat">
+            <h2>100+</h2>
+            <p>Happy Customers</p>
+          </div>
+          <div class="stat">
+            <h2>50+</h2>
+            <p>Delicious Dishes</p>
+          </div>
+          <div class="stat">
+            <h2>100%</h2>
+            <p>Fresh Ingredients</p>
+          </div>
+        </div>
+      </section>
+      
+
+    <section class="scroll-section">
+        <div class="ticker-container">
+          <div class="ticker-track" id="ticker-track">
+            <span class="ticker-text">Authentic Vietnamese Flavors * Fresh Ingredients Daily *</span>
+            <span class="ticker-text">Authentic Vietnamese Flavors * Fresh Ingredients Daily *</span>
+            <span class="ticker-text">Authentic Vietnamese Flavors * Fresh Ingredients Daily *</span>
+          </div>
+        </div>
+      </section>
+      
 
     <section id="menu" class="section">
         <h2>Fan Favorites</h2>
@@ -46,8 +77,6 @@
         </div>
     </section>
 
-   
-
     <section id="contact" class="section contact">
         <h2>Visit Us</h2>
         <p>Email: <a href="mailto:info@phoque.com">info@phoque.com</a></p>
@@ -56,7 +85,57 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Pho Que Restaurant. All Rights Reserved.</p>
+        <div class="footer-container">
+            <!-- First Column - Logo and Info -->
+            <div class="footer-column">
+                <img src="restaurant-logo.png" alt="Restaurant Logo" class="footer-logo">
+                <p>123 Main Street<br>City, State 12345</p>
+                <p>info@restaurant.com</p>
+                <p>Operating Hours:<br>
+                Mon-Fri: 11am - 10pm<br>
+                Sat-Sun: 10am - 11pm</p>
+            </div>
+            
+            <!-- Second Column - Navigation Links -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Reservations</a>
+                <a href="#">About Us</a>
+            </div>
+            
+            <!-- Third Column - Social Media -->
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">IG</a>
+                    <a href="#" class="social-icon">FB</a>
+                    <a href="#" class="social-icon">TW</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2023 Restaurant Name. All Rights Reserved.
+        </div>
     </footer>
+
+    <script>
+        const tickerTrack = document.getElementById('ticker-track');
+        const baseSpeed = 20; // seconds
+      
+        function updateTickerSpeed() {
+          const scrollY = window.scrollY;
+          const speed = Math.max(5, baseSpeed - scrollY / 100);
+          tickerTrack.style.animationDuration = `${speed}s`;
+        }
+      
+        window.addEventListener('scroll', updateTickerSpeed);
+        window.addEventListener('load', updateTickerSpeed);
+      </script>
+      
+      
 </body>
 </html>
