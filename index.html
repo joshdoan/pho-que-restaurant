@@ -139,16 +139,8 @@
 <script>
   const tickerTrack = document.getElementById('ticker-track');
   const baseSpeed = 20;
-
-  function isDesktop() {
-    return window.innerWidth > 768; // You can adjust this breakpoint
-  }
-
-  function updateTickerSpeed() {
-    if (!isDesktop()) return; // Exit if on mobile
-    const speed = Math.max(50);
-    tickerTrack.style.animationDuration = `${speed}s`;
-  }
+  const speed = Math.max(50);
+  tickerTrack.style.animationDuration = `${speed}s`;
 
   window.addEventListener('resize', updateTickerSpeed);
   window.addEventListener('load', updateTickerSpeed);
