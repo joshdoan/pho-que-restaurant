@@ -40,7 +40,6 @@ header {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 15px;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 .hero p {
@@ -52,19 +51,19 @@ header {
 
 @media (max-width: 768px) {
   .hero {
-    padding: 90px 20px;
+    padding: 110px 20px;
   }
 
   .hero h1 {
-    font-size: 3rem;
+    margin-top: 20px;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-    color: white;
+    font-size: 1rem;
+    margin-bottom: 30px;
   }
 }
 
@@ -287,7 +286,7 @@ footer {
   }
 
   .stats-container {
-    gap: 20px;
+    gap: 25px;
   }
 
   .stat p {
@@ -296,7 +295,7 @@ footer {
   }
 
   .stat h2 {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
   }
 }
