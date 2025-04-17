@@ -3,40 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ordering page</title>
+    <title>Pho Que Restaurant</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.avif" type="image/x-icon">
 </head>
-<body>
 
+<body>
     <header>
         <div class="container">
           <nav class="navbar">
             <a href="index.html" class="logo">
               <img src="menu-header.png" alt="Pho Que Logo">
             </a>
-            
             <button class="hamburger" id="hamburger">&#9776;</button>
-      
             <ul class="nav-links" id="nav-links">
               <li><a href="index.html" class="nav-link"><span>Home</span></a></li>
-              <li><a href="menu.html" class="nav-link"><span>Menu</span></a></li>
-              <li><a href="contact.html" class="nav-link"><span>Contact</span></a></li>
+              <li><a href="contact.html" class="nav-link"><span>Contact Us</span></a></li>
               <li><a href="order.html" class="order-button">Order NOW!</a></li>
             </ul>
           </nav>
         </div>
       </header>
     
-      <div class="hero">
+      <div class="order-page">
         <h1>Order Online</h1>
-        <p>Get your favorite Pho delivered straight to your door!</p>
+        <p>Get your food delivered straight to your door with our partners!</p><br>
+        <div class="delivery-buttons">
+          <a href="https://www.grubhub.com/restaurant/pho-que-restaurant-291-adams-st-dorchester/11009112" target="_blank" class="delivery-button">
+            <img src="grubhub-logo.png" alt="Grubhub">
+          </a>
+          <a href="https://www.doordash.com/store/pho-que-inc-dorchester-33551388/" target="_blank" class="delivery-button">
+            <img src="doordash-logo.png" alt="DoorDash">
+          </a>
+          <a href="https://www.ubereats.com/store/pho-que-restaurant/A8JpWeSuTqORbmHxnTN6vg" target="_blank" class="delivery-button">
+            <img src="ubereats-logo.png" alt="Uber Eats">
+          </a>
+        </div>
     </div>
 
-    <div class="order-links">
-        <a href="https://www.doordash.com/store/yourrestaurant" target="_blank" class="button">Order on DoorDash</a>
-        <a href="https://www.ubereats.com/store/yourrestaurant" target="_blank" class="button">Order on Uber Eats</a>
-    </div>
+    
 
     <script>
         const hamburger = document.getElementById('hamburger');
@@ -47,10 +52,41 @@
         });
     </script>
 
-    
+<footer>
+  <div class="footer-container">
+      <div class="footer-column">
+          <p><br>291 Adams St, Dorchester, MA 02122</p>
+          <p>Phone: (617) 219 9999</p>
+          <p>Operating Hours:<br>
+          All week: 10 am - 9 pm</p>
+      </div>
+      
+      <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="order.html">Order</a>
+          <a href="contact.html">Contact</a>
+          <a href="policies.html">Privacy Policy</a>
+      </div>
+      
+      <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/phoquerestaurant/" target="_blank" class="social-icon" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61564968821076" target="_blank" class="social-icon" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        
+  </div>
+  
+  <div class="copyright">
+      &copy; 2025 Pho Que Inc. All Rights Reserved.
+  </div>
+</footer>
 
-    <footer>
-        <p>&copy; 2025 Pho Que Restaurant. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>

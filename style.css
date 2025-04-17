@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css");
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -90,7 +89,6 @@ header {
 }
 
 
-
 .contact p {
     font-size: 1rem;
     margin: 10px 0;
@@ -125,13 +123,6 @@ footer {
     color: white;
 }
 
-.order-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
 
 .container {
     max-width: 1500px;
@@ -696,11 +687,11 @@ nav ul li {
 .visit-full-white {
   background-color: #FAFAF7;
   width: 100%;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 .visit-inner {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
@@ -715,4 +706,229 @@ nav ul li {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.contact-page {
+  background: #FAFAF7;
+  padding: 40px 40px;
+  text-align: center;
+  color: #333;
+}
+
+.contact-page h2 {
+  font-size: 3rem;
+  color: #4a2d1f;
+  margin-bottom: 30px;
+}
+
+.contact-page h1{
+  margin-bottom: 10px;
+}
+
+.contact-page li{
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.contact-page p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.contact-inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.info-block {
+  flex: 1 1 10rem;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.info-block p {
+  margin-bottom: 15px;
+}
+
+.faq-block {
+  flex: 1 1 10rem;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.info-block h3, .faq-block h3 {
+  font-size: 1.5rem;
+  padding-bottom: 25px;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #9b090d;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.contact-button:hover {
+  background-color: black;
+  transform: scale(1.05);
+}
+
+.business-hours {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.faq-question:hover {
+  background-color: #f0f0f0;
+}
+
+.faq-answer {
+  display: none;
+  padding: 12px;
+  background-color: #fff;
+  border-left: 4px solid #6a4029;
+  border-radius: 0 0 8px 8px;
+  font-size: 0.95rem;
+  color: #444;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  margin-bottom: 10px;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  font-size: 1.35rem;
+  color: #6a4029;
+  text-decoration: none;
+  transition: color 0.3s;
+  line-height: 34px;
+}
+
+.social-links a:hover {
+  color: #512f1e;
+}
+
+
+@media (max-width: 768px) {
+  .contact-inline {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.delivery-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.delivery-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 14px 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 140px;
+  height: 60px;
+}
+
+.delivery-button img {
+  max-height: 90px;
+  max-width: 80px;
+  object-fit: contain;
+}
+
+.delivery-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: #ccc;
+}
+
+
+.order-page {
+  background-color: #F4EDE5;
+  text-align: center;
+  background-image: url('menu-header.webp');
+  background-position: center;
+  padding: 230px 20px;
+  color: white;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.order-page h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.order-page p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+.order-page {
+  padding: 110px 20px;
+}
+
+.order-page h1 {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.order-page p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
 }

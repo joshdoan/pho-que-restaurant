@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pho Que Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.avif" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+          <nav class="navbar">
+            <a href="index.html" class="logo">
+              <img src="menu-header.png" alt="Pho Que Logo">
+            </a>
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <ul class="nav-links" id="nav-links">
+              <li><a href="index.html" class="nav-link"><span>Home</span></a></li>
+              <li><a href="contact.html" class="nav-link"><span>Contact Us</span></a></li>
+              <li><a href="order.html" class="order-button">Order NOW!</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+    <section class="contact-page">
+        <div class="contact-container">
+            <h2>Our Policies</h2>
+            <p>Welcome to Pho Que! We strive to provide not only delicious food, but also a transparent and respectful experience for every guest. <br>
+            Please review the following policies regarding privacy, service, refunds, and more. <br>
+            By using our services — whether in person or online — you agree to the terms listed below.</p>
+
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us. When you place an order, make a reservation, or contact us, we may collect information such as your name, email address, phone number, and delivery location. <br>
+            This information is used solely for operational purposes — to complete orders, communicate with you, or improve our service. <br>
+            We do not sell, rent, or share your personal data with third parties except as required by law or when necessary to complete a transaction (e.g., delivery through a third-party platform). <br>
+            We use secure technologies to store and manage your data. <br>
+            If you wish to update or delete your data, please contact us, and we will respond promptly in accordance with applicable privacy laws.</p>
+
+            <h1>Refund & Cancellation Policy</h1>
+            <p>At Pho Que, we prepare every dish with care. Once an order is placed, it is considered final and cannot be canceled through our website or by third-party apps.<br>
+            However, if there is a mistake with your order (e.g., missing items, incorrect dishes, quality concerns), please notify us within 30 minutes of pickup or delivery. <br>
+            We will investigate the issue and may offer a refund, remake, or credit depending on the nature of the situation. Proof of the issue (e.g., a photo) may be requested. <br>    
+            Please note we cannot offer refunds due to personal taste preferences or because of incorrect order placement on the customer’s part.</p>
+
+            <h1>Allergy & Dietary Notice</h1>
+            <p>We understand the importance of dietary restrictions and do our best to accommodate allergies and preferences. <br>
+            That said, our kitchen handles a variety of ingredients including peanuts, tree nuts, shellfish, soy, gluten, dairy, and eggs.<br>
+            We cannot guarantee that any menu item is completely free of allergens. Cross-contact is possible despite careful preparation. <br>
+            If you have a serious allergy, please inform our staff before ordering, and proceed with caution when dining with us.</p>
+
+            <h1>Terms of Service</h1>
+            <p style="margin-bottom: 0;">By visiting our website or placing an order (either directly or via delivery platforms), you agree to:</p>
+            <li>Provide accurate contact and delivery information</li>
+            <li>Treat our staff respectfully and courteously</li>
+            <li>Not engage in fraudulent activity or attempt to reverse payments without cause</li>
+            <li>Accept our stated refund and allergy disclaimers</li>
+            <p>We reserve the right to refuse service to anyone for inappropriate behavior, repeated policy violations, or safety concerns.<br>
+            We may update these terms periodically. Continued use of our services implies acceptance of the most current version.</p>
+
+            <h1>Third-Party Delivery Services</h1>
+            <p>If you use Grubhub, DoorDash, Uber Eats, or any other delivery app to order from us, please understand that their policies may apply in addition to ours. <br>
+            We are not responsible for delays, incorrect delivery addresses, or payment issues that occur through these third-party services.<br>
+            For the best experience, we recommend reviewing the delivery platform’s refund, delivery, and support policies before placing your order.</p>
+
+            <h1>Online Ordering & Account Information</h1>
+            <p>When placing orders through our website, you are responsible for ensuring the accuracy of your cart, address, and contact details. <br>
+            We are not responsible for orders placed incorrectly or deliveries made to wrong addresses due to input errors.</p><br>
+
+            <p style="margin-bottom: 10px;">Have a question, concern, or suggestion? You can reach us at:</p>
+            <p>Phone: (617) 219-9999. Or visit our <a href="contact.html">Contact Page</a>.</p>
+            <p>We’re always happy to help and appreciate your support. Thank you for dining with us!</p>
+      
+          
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+      
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('show');
+        });
+    </script>
+
+<footer>
+  <div class="footer-container">
+      <div class="footer-column">
+          <p><br>291 Adams St, Dorchester, MA 02122</p>
+          <p>Phone: (617) 219 9999</p>
+          <p>Operating Hours:<br>
+          All week: 10 am - 9 pm</p>
+      </div>
+      
+      <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="order.html">Order</a>
+          <a href="contact.html">Contact</a>
+          <a href="policies.html">Privacy Policy</a>
+      </div>
+      
+      <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/phoquerestaurant/" target="_blank" class="social-icon" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61564968821076" target="_blank" class="social-icon" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        
+  </div>
+  
+  <div class="copyright">
+      &copy; 2025 Pho Que Inc. All Rights Reserved.
+  </div>
+</footer>
+</body>
+</html>
