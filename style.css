@@ -101,7 +101,7 @@ footer {
     color: #666;
 }
 
-.order-button, .button {
+.order-button {
   text-decoration: none;
   background-color: #212121;
   color: white;
@@ -117,10 +117,72 @@ footer {
   white-space: nowrap;
 }
 
-.order-button:hover, .button:hover {
-    background-color: #9b090d;
-    transform: scale(1.1);
-    color: white;
+
+.button {
+  text-decoration: none;
+  background-color: #212121;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: inline-block;
+  line-height: 1;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  z-index: 0; 
+  overflow: hidden; 
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #9b090d,
+    #ff3e3e,
+    #9b090d
+  );
+  animation: aurora 5s linear infinite;
+  z-index: -1;
+  filter: blur(25px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+.button:hover {
+  transform: scale(1.07);
+  background-color: #000;
+}
+
+@keyframes aurora {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+}
+
+.order-button:hover {
+  animation: wiggle 0.3s ease;
+  background-color: #9b090d;
+  color: white;
 }
 
 
@@ -202,14 +264,14 @@ footer {
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #333;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #1877F2;
+  border-radius: 25%;
   display: inline-block;
   text-align: center;
-  line-height: 37px; /* exact height = perfect vertical center */
-  font-size: 18px;
+  line-height: 45px;
+  font-size: 35px;
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -217,11 +279,9 @@ footer {
   vertical-align: middle;
   line-height: inherit;
   color: white;
-
 }
 
 .social-icon:hover {
-  background-color: #c62828;
   transform: scale(1.1);
 }
 
@@ -543,7 +603,7 @@ nav ul li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center; /* 👈 Focus center vertically & horizontally */
+  object-position: center center;
   display: block;
 }
 
@@ -699,7 +759,7 @@ nav ul li {
 .visit-inner h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #6a4029; /* Optional: your brand's brown */
+  color: #000;
 }
 
 .map-container {
@@ -718,7 +778,7 @@ nav ul li {
 
 .contact-page h2 {
   font-size: 3rem;
-  color: #4a2d1f;
+  color: #000;
   margin-bottom: 30px;
 }
 
@@ -786,7 +846,7 @@ nav ul li {
 
 .contact-button:hover {
   background-color: black;
-  transform: scale(1.05);
+  animation: wiggle 0.3s ease;
 }
 
 .business-hours {
