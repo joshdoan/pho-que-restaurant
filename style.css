@@ -88,12 +88,6 @@ header {
     width: 280px;
 }
 
-
-.contact p {
-    font-size: 1rem;
-    margin: 10px 0;
-}
-
 footer {
     background-color: #F4EDE5;
     text-align: center;
@@ -837,11 +831,12 @@ nav ul li {
   display: inline-block;
   background-color: #9b090d;
   color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 10px;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: background 0.3s, transform 0.3s;
+  line-height: 30px;
 }
 
 .contact-button:hover {
